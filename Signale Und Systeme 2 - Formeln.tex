@@ -149,6 +149,8 @@
 
 \section{Hilfestellungen}
 
+\subsection{Allgemein}
+
 \begin{itemize}
     \item Das Koeffizientenspektrum eines reelwertigen Signals ist symmetrisch um
           $\frac{n}{2}$
@@ -158,24 +160,24 @@
     \item Nicht periodische Signale $⇔$ Kontinuierliches Spektrum
 \end{itemize}
 
-\section{Signale}
+\subsection{Signale}
 Unterscheidungen von Signalen durch: \textit{Linearität, Kausalität, Stabilität, Zeitinvarianz}
-\subsection{Linear}
+\subsubsection{Linear}
 Ein System ist Linear wenn die Summe von Eingangssignalen gleich die Summe von Einzelantworten $ ∑ y[n] == ∑ x[n] $
 
-\subsection{Kausal}
+\subsubsection{Kausal}
 Kausalität kann daran erkannt werden, dass:
 \begin{itemize}
   \item Impulsantwort ($h[n]$): $h[n]=0$ $\forall n<0$
   \item Übertragungsfunktion ($H(e^{j\theta})$): Rücktransformieren in $h[n]$, kontrolle siehe oben
-  \item Ausgangssig ($y[n]$): kein $n+1$ in $y[n]$ vorhanden
+  \item Ausgangssignal ($y[n]$): kein $n+1$ in $y[n]$ vorhanden
 \end{itemize}
 
-\subsection{Stabil}
+\subsubsection{Stabil}
 BIBO stabil, wenn die Summe der Impulsantwort nicht gegen $\infty$ konvergiert
 $\sum_{k=-\infty}^{\infty} |h[k]| < \infty$
 
-\subsection{Zeitinvariant}
+\subsubsection{Zeitinvariant}
 wenn das (vorab vereinfachte) Signal nicht mehr von \textit{t}, bzw. \textit{n} abhängt. Wie z.B.:
 \begin{itemize}
   \item $z[n] = z[n+1]$ ... Zeitinvariant
