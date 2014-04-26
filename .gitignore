@@ -16,3 +16,4 @@ Signale Und Systeme 2 - Formeln.fdb_latexmk
 *.fls
 *.out
 *.pdf
+.tm_properties
