@@ -158,36 +158,55 @@
 \subsection{Allgemein}
 
 \begin{itemize}
-    \item Das Koeffizientenspektrum eines reelwertigen Signals ist symmetrisch um
-          $\frac{n}{2}$
-    \item $x[n] = x[N-n]$ (reell, gerade) $⇒c_k$ reell, gerade
-    \item $x[n] = x[N-n]$ (reell, ungerade) $⇒c_k$ imaginär, ungerade
-    \item Periodische Signal $⇔$ Diskretes Spektrum
-    \item Nicht periodische Signale $⇔$ Kontinuierliches Spektrum
+    \item Periodisches Signal $⇔$ Diskretes Spektrum
+    \item Nicht periodisches Signal $⇔$ Kontinuierliches Spektrum
 \end{itemize}
 
 \subsection{Signale}
-Unterscheidungen von Signalen durch: \textit{Linearität, Kausalität, Stabilität, Zeitinvarianz}
-\subsubsection{Linear}
-Ein System ist Linear wenn die Summe von Eingangssignalen gleich die Summe von Einzelantworten $ ∑ y[n] == ∑ x[n] $
 
-\subsubsection{Kausal}
+Unterscheidungen von Signalen durch: \textit{Linearität, Kausalität, Stabilität, Zeitinvarianz}
+
+\subsubsection{Linearität}
+Ein System ist linear wenn sich aus der Summe von mehreren Signalen am Eingang, eine Summe der Einzelantworten der Signale am Ausgang ergibt:
+\[
+    x[n] = x₁[n] + x₂[n] ⇒ y[n] = y₁[n] + y₂[n]
+\]
+
+\subsubsection{Kausalität}
+
 Kausalität kann daran erkannt werden, dass:
 \begin{itemize}
-  \item Impulsantwort ($h[n]$): $h[n]=0$ $\forall n<0$
-  \item Übertragungsfunktion ($H(e^{j\theta})$): Rücktransformieren in $h[n]$, kontrolle siehe oben
-  \item Ausgangssignal ($y[n]$): kein $n+1$ in $y[n]$ vorhanden
+  \item die \emph{Impulsantwort} für negative Werte von $n$ kleiner als Null  ist:
+  \[
+          h[n]=0 \quad  ∀ n < 0
+  \]
+  Ist nur die Übertragungsfunktion $H(e^{j\theta})$ gegeben kann man die Impulsantwort kontrollieren, indem man die Übertragungsfunktion durch die inverse Fouriertransformation in die Impulsantwort umwandelt.
+  \item im Ausgangssignal $y[n]$ nicht auf Werte die „in der Zukunft” liegen zurückgegriffen wird, d.h. kein $n+a$ für $a>0$ in $y[n]$ vorhanden
 \end{itemize}
 
-\subsubsection{Stabil}
-BIBO stabil, wenn die Summe der Impulsantwort nicht gegen $\infty$ konvergiert
-$\sum_{k=-\infty}^{\infty} |h[k]| < \infty$
+\subsubsection{Stabilität}
 
-\subsubsection{Zeitinvariant}
-wenn das (vorab vereinfachte) Signal nicht mehr von \textit{t}, bzw. \textit{n} abhängt. Wie z.B.:
+Ein System ist BIBO stabil, wenn die Summe der Impulsantwort nicht gegen $\infty$ konvergiert:
+\[
+    \sum_{k=-\infty}^{\infty} \left| h[k] \right| < \infty
+\]
+
+\subsubsection{Zeitinvarianz}
+
+Ein System ist zeitinvariant wenn das (vorab vereinfachte) Signal nicht mehr von $t$ bzw. $n$ abhängt.\\
+
+Beispiele:
 \begin{itemize}
-  \item $z[n] = z[n+1]$ ... Zeitinvariant
-  \item $z[n] = z[n+1]*n$ ... \textbf{nicht} Zeitinvariant
+  \item $z[n] = z[n+1]$ ... zeitinvariant
+  \item $z[n] = z[n+1]·n$ ... \emph{nicht} zeitinvariant
+\end{itemize}
+
+\subsection{Fourierreihen}
+
+\begin{itemize}
+    \item Das Koeffizientenspektrum eines reelwertigen Signals ist symmetrisch um $\frac{n}{2}$
+    \item $x[n] = x[N-n]$ (reell, gerade) $⇒c_k$ reell, gerade
+    \item $x[n] = x[N-n]$ (reell, ungerade) $⇒c_k$ imaginär, ungerade
 \end{itemize}
 
 \subsection{Fouriertransformation}
