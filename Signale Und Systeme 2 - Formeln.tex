@@ -132,13 +132,26 @@
 
 \section{Formeln}
 
+\subsection{Summenformeln von Reihen}
+
 \begin{align*}
-    ∑_{k=0}^{N-1} x^k &= \frac{1-x^N}{1-x}\\
-    cos² α            &= \frac{1}{2} + \frac{1}{2} · cos 2α\\
-    cos α             &= \frac{1}{2} ( e^{jα} + e^{-jα})\\
-    sin(z+w)          &= sin(z) · cos(w) + cos(z) · sin(w)\\
-    cos(z+w)          &= cos(z) · cos(w) - sin(z) · sin(w)
+    ∑_{n=0}^{N-1} x^n &=
+        \begin{cases}
+            N                 & \text{ if } x = 1\\
+            \frac{1-x^N}{1-x} & \text{ otherwise }
+        \end{cases}\\
+    ∑_{n=0}^{∞} x^n &= \frac{1}{1-x} \quad\text{ if } |x| < 1
 \end{align*}
+
+\subsection{Winkelfunktionen}
+
+\begin{alignat*}{3}
+    \cos{α}     &= \frac{e^{jα} + e^{-jα}}{2} \quad&&
+    \sin{α}     &= \frac{e^{jα} - e^{-jα}}{2·j}\\
+    \cos²{α}    &= \frac{1}{2} + \frac{1}{2} · cos 2α\\
+    \sin{(z+w)} &= \sin{z} · \cos{w} + \cos{z} · \sin{w}\\
+    \cos{(z+w)} &= \cos{z} · \cos{w} - \sin{z} · \sin{w}
+\end{alignat*}
 
 \section{Hilfestellungen}
 
